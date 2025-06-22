@@ -1459,43 +1459,45 @@ export default function Home() {
         {/* Main Hero Section - Full Height */}
         <div
           id="hero"
-          className="min-h-screen flex flex-col justify-center items-center px-4 relative"
+          className="min-h-screen flex flex-col justify-center items-center px-4 relative pt-20 pb-16"
         >
           {/* Main Content */}
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto flex-1 flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/30 mb-8 shadow-lg">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              {t.heroBadge}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/30 shadow-lg">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                {t.heroBadge}
+              </div>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-display text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-emerald-100 to-teal-100 bg-clip-text text-transparent mb-6 leading-tight drop-shadow-lg">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-emerald-100 to-teal-100 bg-clip-text text-transparent mb-4 leading-tight drop-shadow-lg">
               {t.heroTitle}
             </h1>
 
             {/* Subtitle */}
-            <p className="font-display text-xl md:text-2xl text-emerald-50 mb-4 font-medium drop-shadow-md">
+            <p className="font-display text-lg md:text-xl lg:text-2xl text-emerald-50 mb-3 font-medium drop-shadow-md">
               {t.heroSubtitle}
             </p>
 
-            <p className="font-body text-lg text-emerald-100/90 mb-12 max-w-2xl mx-auto drop-shadow-sm">
+            <p className="font-body text-base md:text-lg text-emerald-100/90 mb-8 max-w-2xl mx-auto drop-shadow-sm">
               {t.heroDescription}
               <br className="hidden md:block" />
               {t.heroDescriptionExtra}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Link href="https://t.me/finfix_app_bot" className="group">
-                <button className="flex items-center gap-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white font-bold py-6 px-12 rounded-3xl text-xl md:text-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 animate-pulse-slow relative overflow-hidden">
+                <button className="flex items-center gap-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white font-bold py-4 px-8 md:py-6 md:px-12 rounded-3xl text-lg md:text-xl lg:text-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-emerald-500/25 animate-pulse-slow relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <Image
                     src="/telegram-svgrepo-com.svg"
                     alt="Telegram"
-                    width={32}
-                    height={32}
-                    className="z-10"
+                    width={28}
+                    height={28}
+                    className="z-10 md:w-8 md:h-8"
                   />
                   <span className="z-10">{t.heroButton}</span>
                 </button>
@@ -1504,9 +1506,11 @@ export default function Home() {
           </div>
 
           {/* Scroll Indicator - Fixed at bottom */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-            <div className="text-white/60 text-sm mb-2">{t.heroScrollText}</div>
-            <div className="w-1 h-8 bg-gradient-to-b from-white/40 to-transparent rounded-full"></div>
+          <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <div className="text-white/60 text-xs md:text-sm mb-1 md:mb-2">
+              {t.heroScrollText}
+            </div>
+            <div className="w-1 h-6 md:h-8 bg-gradient-to-b from-white/40 to-transparent rounded-full"></div>
           </div>
         </div>
 
