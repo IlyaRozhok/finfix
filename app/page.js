@@ -1131,7 +1131,7 @@ export default function Home() {
                       {language === "ua"
                         ? "UA"
                         : language === "ru"
-                        ? "РУ"
+                        ? "RU"
                         : "EN"}
                     </span>
                     <svg
@@ -1271,7 +1271,7 @@ export default function Home() {
                       {language === "ua"
                         ? "UA"
                         : language === "ru"
-                        ? "РУ"
+                        ? "RU"
                         : "EN"}
                     </span>
                     <svg
@@ -1293,7 +1293,7 @@ export default function Home() {
 
                   {/* Language Dropdown */}
                   {isLanguageDropdownOpen && (
-                    <div className="absolute top-full right-0 mt-2 bg-white/20 backdrop-blur-xl border border-white/30 rounded-xl shadow-2xl overflow-hidden z-50 min-w-48">
+                    <div className="absolute top-full right-0 mt-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-xl shadow-2xl overflow-hidden z-50 min-w-48">
                       <button
                         onClick={() => changeLanguage("ua")}
                         className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-white/20 transition-all duration-200 ${
