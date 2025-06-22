@@ -1459,7 +1459,7 @@ export default function Home() {
         {/* Main Hero Section - Full Height */}
         <div
           id="hero"
-          className="min-h-screen flex flex-col justify-center items-center px-4 relative pt-16"
+          className="min-h-screen flex flex-col justify-center items-center px-4 relative"
         >
           {/* Main Content */}
           <div className="text-center max-w-4xl mx-auto">
