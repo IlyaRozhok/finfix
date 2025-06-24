@@ -1468,16 +1468,19 @@ export default function Home() {
           {/* Main Content */}
           <div className="text-center max-w-4xl mx-auto flex-1 flex flex-col justify-center">
             {/* Badge */}
-            <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/30 shadow-lg">
+            <div className="flex justify-center mb-6 px-4">
+              <div className="inline-flex items-center px-3 py-2 md:px-4 bg-white/20 backdrop-blur-sm rounded-full text-xs md:text-sm font-medium text-white border border-white/30 shadow-lg max-w-[95vw]">
                 <span
                   className={`w-2 h-2 ${
                     isInDevelopment ? "bg-yellow-400" : "bg-green-400"
-                  } rounded-full mr-2 animate-pulse`}
+                  } rounded-full mr-2 animate-pulse flex-shrink-0`}
                 ></span>
-                {t.heroBadge}
+                {/* Показываем полный текст только на экранах больше 700px */}
+                <span className="hidden min-[700px]:inline">{t.heroBadge}</span>
                 {isInDevelopment && (
-                  <span className="ml-2 text-yellow-200">{t.heroBadgeDev}</span>
+                  <span className="text-yellow-200 min-[700px]:ml-2 text-center leading-tight">
+                    {t.heroBadgeDev}
+                  </span>
                 )}
               </div>
             </div>
