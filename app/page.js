@@ -505,7 +505,7 @@ export default function Home() {
       heroButton: "Запустить FinFix",
       heroScrollText: "Узнать больше",
       heroBadge: "Telegram бот для контроля финансов",
-      heroBadgeDev: "(в разработке, некоторые функции не работают как должны)",
+      heroBadgeDev: "В разработке",
 
       // Features
       featuresTitle: "Полный контроль финансов в одном чате",
@@ -673,7 +673,7 @@ export default function Home() {
       heroButton: "Запустити FinFix",
       heroScrollText: "Дізнатися більше",
       heroBadge: "Telegram бот для контролю фінансів",
-      heroBadgeDev: "(в розробці, деякі функції не працюють як слід)",
+      heroBadgeDev: "В розробці",
 
       // Features
       featuresTitle: "Повний контроль фінансів в одному чаті",
@@ -841,7 +841,7 @@ export default function Home() {
       heroButton: "Launch FinFix",
       heroScrollText: "Learn more",
       heroBadge: "Telegram bot for financial control",
-      heroBadgeDev: "(in development, some functions don't work as expected)",
+      heroBadgeDev: "In development",
 
       // Features
       featuresTitle: "Full financial control in one chat",
