@@ -395,6 +395,7 @@ export default function Home() {
     useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isInDevelopment, setIsInDevelopment] = useState(true); // Состояние проекта
 
   // Force scroll to top on page load/reload
   useEffect(() => {
@@ -504,6 +505,7 @@ export default function Home() {
       heroButton: "Запустить FinFix",
       heroScrollText: "Узнать больше",
       heroBadge: "Telegram бот для контроля финансов",
+      heroBadgeDev: "(в разработке, некоторые функции не работают как должны)",
 
       // Features
       featuresTitle: "Полный контроль финансов в одном чате",
@@ -671,6 +673,7 @@ export default function Home() {
       heroButton: "Запустити FinFix",
       heroScrollText: "Дізнатися більше",
       heroBadge: "Telegram бот для контролю фінансів",
+      heroBadgeDev: "(в розробці, деякі функції не працюють як слід)",
 
       // Features
       featuresTitle: "Повний контроль фінансів в одному чаті",
@@ -838,6 +841,7 @@ export default function Home() {
       heroButton: "Launch FinFix",
       heroScrollText: "Learn more",
       heroBadge: "Telegram bot for financial control",
+      heroBadgeDev: "(in development, some functions don't work as expected)",
 
       // Features
       featuresTitle: "Full financial control in one chat",
@@ -1466,8 +1470,15 @@ export default function Home() {
             {/* Badge */}
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/30 shadow-lg">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                <span
+                  className={`w-2 h-2 ${
+                    isInDevelopment ? "bg-yellow-400" : "bg-green-400"
+                  } rounded-full mr-2 animate-pulse`}
+                ></span>
                 {t.heroBadge}
+                {isInDevelopment && (
+                  <span className="ml-2 text-yellow-200">{t.heroBadgeDev}</span>
+                )}
               </div>
             </div>
 
